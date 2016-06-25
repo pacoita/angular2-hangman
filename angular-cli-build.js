@@ -11,6 +11,8 @@ module.exports = function(defaults) {
       'es6-shim/es6-shim.js',
       'reflect-metadata/*.js',
       'rxjs/**/*.js',
+      'ng2-bootstrap/**/*.js',
+      'moment/moment.js',
       '@angular/**/*.js'
     ]
   });
