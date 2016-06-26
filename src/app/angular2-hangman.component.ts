@@ -5,11 +5,11 @@ import { EntryPageComponent } from './entryPage/entryPage.component';
   moduleId: module.id,
   selector: 'angular2-hangman-app',
   directives: [EntryPageComponent],
-  template: '<entry-page></entry-page>',
+  templateUrl: 'angular2-hangman.component.html',
   styleUrls: ['angular2-hangman.component.css']
 })
 
 export class Angular2HangmanAppComponent {
 
-  title = 'ciao';
+  title = 'he';
 }

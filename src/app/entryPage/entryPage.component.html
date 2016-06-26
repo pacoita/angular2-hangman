@@ -2,9 +2,9 @@
   <div class="col-lg-offset-4 col-lg-3">
 
       <div class="input-group boxContainer">
-        <input type="text" class="form-control" placeholder="Player name">
+        <input type="text" class="form-control" placeholder="Player name" #playerName>
         <span class="input-group-btn">
-          <button class="btn btn-primary" type="button">Let's play!</button>
+          <button class="btn btn-primary" type="button" (click)="startGame(playerName)">Let's play!</button>
         </span>
       </div>
 
