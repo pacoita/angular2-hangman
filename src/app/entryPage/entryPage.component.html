@@ -4,9 +4,11 @@
       <div class="input-group boxContainer">
         <input type="text" class="form-control" placeholder="Player name" #playerName>
         <span class="input-group-btn">
-          <button class="btn btn-primary" type="button" (click)="startGame(playerName)">Let's play!</button>
+          <button class="btn btn-primary" type="button" (click)="startGame(playerName.value)">Let's play!</button>
         </span>
       </div>
 
-    </div>
+  </div>
 </div>
+
+<game-panel [newPlayer]="player"></game-panel>
