@@ -38,6 +38,7 @@ const barrels: string[] = [
   'app/best-scores',
   'app/entryPage',
   'app/game-panel',
+  'app/+hero',
   /** @cli-barrel */
 ];
 
