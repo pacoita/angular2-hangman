@@ -1,32 +1,30 @@
 import { Component } from '@angular/core';
+import { Router } from "@angular/router";
 import { BUTTON_DIRECTIVES } from 'ng2-bootstrap/ng2-bootstrap';
 import { Player } from '../model/player';
-import { GamePanelComponent } from '../game-panel/game-panel.component';
-import { Router } from "@angular/router";
+import { UserServiceService } from '../user-service/user-service.service';
+
 
 @Component({
   moduleId: module.id,
   selector: 'entry-page',
-  directives: [BUTTON_DIRECTIVES, GamePanelComponent],
+  directives: [BUTTON_DIRECTIVES],
   templateUrl: 'entryPage.component.html',
   styleUrls: ['entryPage.component.css']
 })
 
 export class EntryPageComponent {
 
-  constructor(private router: Router){
-
-  }
-
   player: Player;
 
-  startGame(playerName: string) {
-    console.log('Clicked: ', playerName);
+  constructor(private router: Router, private userService: UserServiceService){}
 
+  startGame(playerName: string) {
     let name = playerName.trim();
 
-    //TODO: Pass proper parameters for HighScore and language
-    this.player = new Player(name, null, null);
+    // TODO: Pass language from entry page
+    this.player = new Player(name, null);
+    this.userService.setCurrentPlayer(this.player);
     this.router.navigate(['/game']);
   }
 }

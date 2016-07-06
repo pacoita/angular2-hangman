@@ -1,15 +1,11 @@
-'use strict';
-
 export class Player {
 
   id: number;
   name: string;
-  highScore: number;
   language: string;
 
-  constructor(name, score, lang) {
+  constructor(name: string, lang: string) {
     this.name = name || Player.GetRandomUsername();
-    this.highScore = score || 0;
     this.language = lang || 'eng';
   }
 
