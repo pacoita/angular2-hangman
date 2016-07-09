@@ -13,7 +13,8 @@ module.exports = function(defaults) {
       'rxjs/**/*.js',
       'ng2-bootstrap/**/*.js',
       'moment/moment.js',
-      '@angular/**/*.js'
+      '@angular/**/*.js',
+      'underscore/underscore.js'
     ]
   });
 };

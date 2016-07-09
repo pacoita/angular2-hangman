@@ -1,0 +1,7 @@
+#lettersContainer {
+  text-align: center;
+}
+
+#lettersContainer input {
+  margin: 5px;
+}

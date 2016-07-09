@@ -4,13 +4,15 @@
 /** Map relative paths to URLs. */
 const map: any = {
   'ng2-bootstrap': 'vendor/ng2-bootstrap',
-  'moment': 'vendor/moment/moment.js'
+  'moment': 'vendor/moment/moment.js',
+  'underscore': 'vendor/underscore/underscore.js'
 };
 
 /** User packages configuration. */
 const packages: any = {
   'vendor/ng2-bootstrap': { defaultExtension: 'js' },
-  'moment': { defaultExtension: 'js' }
+  'moment': { defaultExtension: 'js' },
+  'underscore': { format: 'cjs' }
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -31,6 +33,7 @@ const barrels: string[] = [
   'rxjs',
   'ng2-bootstrap',
   'moment',
+  'underscore',
 
   // App specific barrels.
   'app',
@@ -38,7 +41,8 @@ const barrels: string[] = [
   'app/best-scores',
   'app/entryPage',
   'app/game-panel',
-  'app/user-service'
+  'app/user-service',
+  'app/words-panel'
   /** @cli-barrel */
 ];
 

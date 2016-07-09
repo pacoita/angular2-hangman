@@ -1,11 +1,9 @@
 <div *ngIf="newPlayer" class="row">
-  <div class="playerPanel col-lg-4 col-mg-2">
+  <div class="playerPanel col-lg-3 col-mg-2">
     <h1>Welcome {{newPlayer.name}}</h1>
   </div>
 
-  <div class="wordsPanel col-lg-5 col-mg-3">
-
-  </div>
+  <words-panel></words-panel>
 
   <best-scores></best-scores>
 </div>
