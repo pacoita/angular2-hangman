@@ -1,9 +1,25 @@
-<div class="col-lg-6 col-mg-3">
-  <div id="lettersPlaceholders">
-
+<div class="col-lg-6 col-mg-3" id="lettersMainContainer">
+  <div id="secretWordContainer">
+      <span *ngFor="let word of secretWord" class="letter">
+        <span *ngIf="!word.chosen">__</span>
+        <span *ngIf="word.chosen">{{word.name}}</span>
+      </span>
   </div>
 
   <div id="lettersContainer">
-    <input type="button" class="btn btn-primary" [(ngModel)]="letter.name" *ngFor="let letter of lettersAvailable">
+    <input type="button" 
+          class="btn letter btn-primary" 
+          (click)="guessWord(letter)"
+          [(ngModel)]="letter.name" 
+          [disabled]="letter.chosen"
+          *ngFor="let letter of lettersAvailable">
   </div>
+
+  <div id="scoreContainer">
+      <label>You have {{temptativesLeft}} temptatives left.</label>
+      <div *ngIf="temptativesLeft == 0 || hasWon">
+          <label *ngIf="temptativesLeft == 0">Game over!</label>
+          <label *ngIf="hasWon">You won, congratulations!</label>
+          <input id="playAgainButton" type="button" class="btn btn-warning" (click)="startNewGame()" value="Play again!">   
+      </div>
 </div>

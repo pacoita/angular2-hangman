@@ -1,7 +1,15 @@
-#lettersContainer {
+#lettersMainContainer {
   text-align: center;
 }
 
-#lettersContainer input {
+#lettersContainer {
+  margin-top: 30px;
+}
+
+#scoreContainer {
+  margin-top: 50px;
+}
+
+.letter {
   margin: 5px;
 }

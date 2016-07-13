@@ -4,17 +4,23 @@ import { Injectable } from '@angular/core';
 export class DataProviderService {
 
    words: string[] = [
-  'Rails', 'AngularJS', 'Bootstrap', 'Ruby', 'JavaScript',
+  'rails', 'angularJS', 'bootstrap', 'ruby', 'javaScript',
   'authentication', 'function', 'array', 'object', 'sublime',
   'github', 'agile', 'route', 'database', 'model', 'view',
   'controller', 'terminal', 'array', 'data', 'inheritance',
-  'Heroku', 'scope',  'closure'
+  'heroku', 'scope',  'closure'
 ];
 
   constructor() {}
 
-  //TODO: move fallback word resource to proper location & fetch them from DB
+  getGameWord() {
+    let index = this.pickRandomWord(this.words.length);
+    return this.words[index];
+  }
 
+  private pickRandomWord(maxValue: number) {
+    return Math.floor(Math.random() * maxValue);
+  }
 
 
 }

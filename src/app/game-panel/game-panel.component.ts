@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Player } from '../model/player';
-import { BestScoresComponent } from '../best-scores/best-scores.component';
 import { WordsPanelComponent } from '../words-panel/words-panel.component';
 import { UserServiceService } from '../user-service/user-service.service';
 
@@ -8,7 +7,7 @@ import { UserServiceService } from '../user-service/user-service.service';
   moduleId: module.id,
   selector: 'game-panel',
   templateUrl: 'game-panel.component.html',
-  directives: [BestScoresComponent, WordsPanelComponent],
+  directives: [WordsPanelComponent],
   styleUrls: ['game-panel.component.css']
 })
 
