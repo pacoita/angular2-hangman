@@ -21,7 +21,8 @@ The typings folder could not show up after npm install. If so, please install th
 $ npm run typings install
 `
 
-**Note:** you should run the application as administrator. Otherwise zou will be welcome with the following message: 'Running without elevated rights. Running Ember CLI "as Administrator" increases performance significantly.'
+**Note:** you should run the application as administrator. Otherwise you will be welcome with the following message: 
+'Running without elevated rights. Running Ember CLI "as Administrator" increases performance significantly.'
 
 ##Run
 
@@ -43,4 +44,4 @@ $ npm start
 
 This command will also build the code and move it to the "dist" folder.
 
-Angular CLI documentation (can be found here).[https://angular.io/docs/ts/latest/quickstart.html]
+Angular CLI documentation [can be found here.] (https://angular.io/docs/ts/latest/quickstart.html)
